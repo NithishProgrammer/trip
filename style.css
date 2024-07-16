@@ -1,0 +1,104 @@
+.boxes{
+
+    background: rgba(218, 223, 225);
+    border-radius: 16px;
+    border: solid 1px lightgrey;
+    padding: 20px;
+    transition: 1s;
+    margin-bottom: 50px;
+ 
+}
+
+.input{
+
+    margin-bottom: 40px;
+}
+
+
+input{
+
+    border-radius: 14px;
+    border: solid 1px lightgrey;
+    width: 200px;
+    padding: 16px;
+    margin-bottom: 20px;
+
+}
+
+button{
+
+    background: black;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-family: small-caps bold sans-serif;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: regular;
+    src: url(Regular.otf);
+}
+
+@font-face {
+    font-family: bold;
+    src: url(Bold.otf);
+}
+
+@font-face {
+    font-family: good;
+    src: url(Gloock-Regular.otf);
+}
+
+
+#tits{
+
+    font-family: bold;
+}
+
+.no1{
+
+    display: inline;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+span{
+
+    font-family: regular;
+    
+}
+
+.results{
+
+    transition: 1s;
+}
+
+.weather img{
+
+    display: inline;
+    align-items: center;
+    transition: 0.3s;
+    
+    
+}
+
+.weather img:hover{
+
+    transform: scale(1.2);
+    rotate: -20deg;
+    
+
+
+}
+
+.weather h3{
+
+    color: rgb(46, 47, 48);
+    text-decoration: underline rgb(0, 132, 255);
+    text-decoration-style: dotted;
+    transition: 0.3s;
+    margin-bottom: 70px;
+}

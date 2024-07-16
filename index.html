@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan your Trip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <center>
+        <h1 style="font-family: good;">Plan Your Trip</h1>
+        <h3>🏍️ 🚙 🚌 🚂 ✈️</h3>
+    </center>
+
+    <div class="boxes">
+        <div class="input">
+
+            <center>
+
+            <input type="number" placeholder="Enter Total Amount. In Rs." id="amount">
+            <br>
+            <input type="number" placeholder="Enter the No.of People" id="people">
+            <br>
+            <button onclick="plan()" style="cursor: pointer;">Plan Trip</button>
+
+        </center>
+
+
+        </div>
+
+        <div class="results">
+            <div class="no1">
+                <center>
+            <h3 id="tits"></h3><span id="Average"></span></center>
+        </div>
+        <div class="no1">
+            <center>
+            <h3 id="tits2"></h3> <span id="travel"></span></center>
+        </div>
+
+        <div class="no1">
+            <center>
+            <h3 id="tits3"></h3><span id="percent"> </span></center>
+        </div>
+        </div>
+
+    </div>
+<center>
+    <div class="weather">
+        <h3 onclick="weather()" style="cursor: pointer;">Check how is the Weather   <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="Weather (From Flaticon)" width="40px" height="40px">   of the City that You are about to Visit / Explore.</h3>
+        
+    
+    </div>
+
+
+    <div>
+        <h5>© Nithish S</h5>
+        <p>@Nithish S</p>
+    </div>
+</center>
+
+
+    <script>
+
+        function plan() {
+
+            let tits = document.getElementById('tits');
+            let tits2 = document.getElementById('tits2');
+            let tits3 = document.getElementById('tits3');
+            let amount = document.getElementById('amount').value;
+            let people = document.getElementById('people').value;
+            let Average = document.getElementById('Average');
+            let travel = document.getElementById('travel');
+            let percent = document.getElementById('percent');
+            let finalamt = amount/people;
+            finalamt = finalamt.toFixed(0);
+            let amt = finalamt.value;
+            tits.innerText = "Average money You have 💵 : ";
+            tits2.innerText = "Travel: ";
+            tits3.innerText = "Percent of enjoyment: ";
+            Average.innerText = "You have: ₹" + finalamt;
+            travel.innerText = "";
+            let joyment = finalamt/amount*100;
+            joyment = joyment.toFixed(1)
+             percent.innerText = joyment + "%" + "       " + "(Just Prediction, it depends upon You too!)";
+            
+
+        
+
+            
+            if (finalamt < 3000 && people > 2) {
+
+                Average.innerText = "You have: ₹" + finalamt + "  😢";
+                travel.innerText = "Bike would be better  🏍️";
+                
+            }
+
+            if (finalamt < 3000 && people > 4) {
+
+                Average.innerText = "You have: ₹" + finalamt + "  😢";
+                travel.innerText = "Nothing to go with  😔";
+
+            }
+
+            if (finalamt < 3000 && people > 9) {
+
+                Average.innerText = "You have: ₹" + finalamt + "  😢";
+                travel.innerText = "Nothing to go with  😔";
+
+}
+
+
+            if (finalamt > 4000 && people > 2) {
+
+                Average.innerText = "You have: ₹" + finalamt + "  😊";
+                travel.innerText = "Bike would be better  🏍️";
+                
+            }
+
+            if (finalamt > 4000 && people > 4) {
+
+                Average.innerText = "You have: ₹" + finalamt + "  😊";
+                travel.innerText = "Car would be better  🚙";
+            }
+
+            if (finalamt > 4000 && people > 9) {
+
+                Average.innerText = "You have: ₹" + finalamt + "  😊";
+                travel.innerText = "Public Bus 🚎 / Train would be better 🚂";
+            }
+
+
+                if (finalamt > 8000 && people > 2) {
+
+    Average.innerText = "You have: ₹" + finalamt + "  😊";
+    travel.innerText = "Bike would be better  🏍️";
+
+    }
+
+    if (finalamt > 8000 && people > 4) {
+
+    Average.innerText = "You have: ₹" + finalamt + "  😊";
+    travel.innerText = "Car would be better  🚙";
+    }
+
+    if (finalamt > 8000 && people > 9) {
+
+    Average.innerText = "You have: ₹" + finalamt + "  😊";
+    travel.innerText = "Public Bus 🚎 / Train would be better 🚂";
+    }
+
+
+
+    if (finalamt > 16000 && people > 2) {
+
+Average.innerText = "You have: ₹" + finalamt + "  😊";
+travel.innerText = "Bike would be better  🏍️";
+
+}
+
+if (finalamt > 16000 && people > 4) {
+
+Average.innerText = "You have: ₹" + finalamt + "  😊";
+travel.innerText = "Car would be better  🚙";
+}
+
+if (finalamt > 16000 && people > 9) {
+
+Average.innerText = "You have: ₹" + finalamt + "  😊";
+travel.innerText = "Private / Public Bus 🚎 / Train would be better 🚂";
+}
+
+
+
+if (finalamt > 26000 && people > 2) {
+
+Average.innerText = "You have: ₹" + finalamt + "  😊";
+travel.innerText = "Bike would be better  🏍️";
+
+}
+
+if (finalamt > 26000 && people > 4) {
+
+Average.innerText = "You have: ₹" + finalamt + "  😊";
+travel.innerText = "Car would be better  🚙";
+}
+
+if (finalamt > 26000 && people > 9) {
+
+Average.innerText = "You have: ₹" + finalamt + "  😊";
+travel.innerText = "Flight ✈️ / Private / Public Bus 🚎 / Train would be better 🚂";
+}
+
+
+if (amount == "" && people == "") {
+
+    tits.style.color = "#cf352e";
+
+    tits.innerText = "Enter Input";
+    tits2.innerText = "";
+            tits3.innerText = "";
+            Average.innerText = "";
+            percent.innerText = joyment + "%";
+
+
+    
+}
+
+
+}
+
+
+function weather() {
+
+    window.location.href = "https://nithishprogrammer.github.io/weather/"
+    
+}
+
+       
+    </script>
+    
+</body>
+</html>
